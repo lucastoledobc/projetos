@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sistema Solar</title>
+    <link rel="stylesheet" href="anexos/game.css">
+    <!-- <script src="anexos/game.js" defer></script> -->
+    <style>
+        main {
+            display: flex;
+            align-items: center; /*vertical*/
+            justify-content: center; /*horizontal*/
+            min-height: 100vmin; 
+        }
+
+        #sol {
+            --x: clamp(100px, 3vw, 3vh);
+            position: absolute;
+            height: var(--x);
+            width: var(--x);
+
+            background: rgb(255, 230, 0);
+            box-shadow: 0 0 30px white;
+            border-radius: 50%;
+        }
+
+        @keyframes anime-1 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #eixo1 {
+            --e1: clamp(270px, 5vw, 5vh);
+            position: absolute;
+            height: var(--e1);
+            width: var(--e1);
+
+            border-right: 1px solid white;
+            border-radius: 50%;
+            animation: anime-1 10s linear infinite;
+        }
+
+        #eixo1 #terra {
+            --t: clamp(60px, 5vw, 5vh);
+            position: absolute;
+            height: var(--t);
+            width: var(--t);
+
+            background: rgb(72, 129, 252);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.733);
+            border-radius: 50%;
+            left: 140px;
+            top: 240px;
+        }
+        
+        #eixo2 {
+            --e2: clamp(120px, 1vw, 1vh);
+            position: absolute;
+            height: var(--e2);
+            width: var(--e2);
+
+            border-right: 1px solid rgb(255, 255, 255);
+            border-radius: 50%;
+            animation: anime-1 10s linear infinite;
+
+            left: -30px;
+            top: -30px;
+        }
+
+        #eixo2 #lua {
+            --l: clamp(25px, 1vh, 1vw);
+            position: absolute;
+            height: var(--l);
+            width: var(--l);
+
+            background: rgb(255, 255, 255);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.521);
+            border-radius: 50%;
+            
+            left: 65px;
+            top: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sistema Solar</h1>
+    <main>
+        <div id="sol"></div>
+
+        <div id="eixo1">
+            <div id="terra">
+                <div id="eixo2">
+                    <div id="lua"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <section id="icones"></section>
+    <footer>
+        Créditos: divLoda (youtube)
+    </footer>
+</body>
+
+<script>
+    
+</script>
+
+</html>
