@@ -41,7 +41,7 @@ header {
 
 header > h1 {
     font-family: var(--fonte2);
-    padding-top: 3rem;
+    padding-top: 2rem;
     font-size:  clamp(1vw, 6rem, 9vw);
     font-variant: small-caps;
 }
@@ -49,7 +49,7 @@ header > h1 {
 header > p {
     font-family: var(--fonte1);
     font-size: clamp(1vw, 1rem, 5vw);
-    padding-bottom: 15px;
+    padding-bottom: 2rem;
 }
 header > p > strong > a {
     font-size: clamp(1vw, 1rem, 5vw);

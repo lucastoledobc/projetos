@@ -18,8 +18,6 @@
     --fonte-android: 'android', cursive;
 }
 
-/**/
-
 * {
     font-family: var(--fonte-padrao);
     margin: 0px;
@@ -32,7 +30,6 @@ header {
     background: linear-gradient(var(--cor2)15%, var(--cor5)95%);
     text-align: center;
     color: rgb(255, 255, 255);
-    height: 200px;
     max-width: 1000px;
     margin: auto;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
@@ -41,7 +38,8 @@ header {
 header > p {
     text-indent: 0em;
     font-family: var(--fonte-padrao);
-    padding: 0 10px 0px 10px;
+    padding: 0 1rem 2rem 1rem;
+    margin: 0;
 }
 
 
@@ -83,18 +81,20 @@ a:hover {
 
 
 
-body {
-    background-color: var(--cor0);
-    text-align: justify;
+html {
+    background-color: var(--cor0);    
+}
+
+body {    
+    max-width: 980px;
+    margin: auto;
+    text-align: justify;    
+    box-shadow: 0px 0px 10px black;
 }
 
 main {
     background-color: white;
-    margin: 0px auto 10px auto;
-    padding: 10px;
-    border-radius: 0 0 10px 10px;
-    max-width: 980px;
-    box-shadow: 0px 0px 10px black;
+    padding: 1rem;
 }
 
 main a:visited {
@@ -106,27 +106,22 @@ main a:after {
 }
 p {
     text-indent: 2em;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin: 1rem 0;
+    padding: 0.5rem;
 }
 
 strong {
     color: var(--cor4);
 }
 
-h2 {
-    margin: 10px;
-}
 
 h2,h3 {
     font-family: 'android';
     color: var(--cor4);
-    padding-left: 10px;
 }
 
 h3 {
     background: linear-gradient(to right, var(--cor1), #ffffff);
-    margin-left: 20px;
 }
 
 #video {
@@ -155,13 +150,13 @@ section {
 }
 
 section > p {
-    margin: 10px;
+    margin: 0.5rem;
 }
 h4 {
     border-radius: 10px 10px 0 0;
     background-color: var(--cor3);
     color: white;
-    padding: 10px 10px 10px 10px;
+    padding: 0.5rem;
 }
 
 #list {
