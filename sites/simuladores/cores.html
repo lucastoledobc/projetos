@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/anexos/game.css">    
+    <script src="/anexos/game.js" defer></script>
+    
+    <title>Cores</title>
+    <meta name="description" content="Combinação de cores primárias RGB.">
+
+    <style>
+        main > section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .top {
+            height: 15svh;
+        }
+        .botao {
+            background-color: var(--trans);
+            color: var(--branco);            
+            font-size:  clamp(1rem,7vh,9vw);
+            border-radius: 5px;
+            padding: 0.1rem 1rem;
+        }
+
+        .mid {
+            height: 25svh;
+        }
+        #barra {
+            height: 10svh;
+            width: 80%;
+            border: clamp(1px,0.4vh,1vw) solid var(--branco);
+            border-radius: 5px;
+
+            background: linear-gradient(to right,
+                rgb(var(--verm), 0, 0),
+                rgb(var(--verm), 0, 0),
+                rgb(var(--verm), var(--verd2), 0),
+                rgb(var(--verm), var(--verd), 0),
+                rgb(var(--verm2), var(--verd), 0),
+                rgb(0, var(--verd), 0),
+                rgb(0, var(--verd), var(--azul2)),
+                rgb(0, var(--verd), var(--azul)),
+                rgb(0, var(--verd2), var(--azul)),
+                rgb(0, 0, var(--azul)),
+                rgb(0,0,var(--azul))
+                );
+        }
+        #roda {
+            aspect-ratio: 1;
+            height: 25svh;
+            border: 3px solid var(--branco);
+            border-radius: 50%;
+            background: conic-gradient(
+                rgb(var(--verm), 0, 0),
+                rgb(var(--verm), var(--verd2), 0),
+                rgb(var(--verm), var(--verd), 0),
+                rgb(var(--verm2), var(--verd), 0),
+                rgb(0, var(--verd), 0),
+                rgb(0, var(--verd), var(--azul2)),
+                rgb(0, var(--verd), var(--azul)),
+                rgb(0, var(--verd2), var(--azul)),
+                rgb(0, 0, var(--azul)),
+                rgb(var(--verm2),0,var(--azul)),
+                rgb(var(--verm),0,var(--azul)),
+                rgb(var(--verm),0,var(--azul2)),
+                rgb(var(--verm), 0, 0)
+                );
+        }
+        
+        .bot {
+            height: 20svh;
+            margin-top: 10svh;
+        }
+        .luz {
+            aspect-ratio: 1;
+            width: 25%;
+            max-width: 30svh;
+            border-radius: 50%;
+        }
+        #lred {
+            background: conic-gradient(
+                rgb(var(--verm),0,0) 30deg, 
+                var(--trans) 30deg 330deg,
+                rgb(var(--verm),0,0) 330deg
+            );
+        }
+        #lgre {
+            background: conic-gradient(
+                rgb(0,var(--verd),0) 30deg, 
+                var(--trans) 30deg 330deg,
+                rgb(0,var(--verd),0) 330deg
+            );
+            
+        }
+        #lblu {
+            background: conic-gradient(
+                rgb(0,0,var(--azul)) 30deg, 
+                var(--trans) 30deg 330deg,
+                rgb(0,0,var(--azul)) 330deg
+            );
+        }
+        
+        
+        .range {
+            width: 15svw;
+        }
+
+        @media (orientation: portrait) {
+            .bot {
+            height: 15svh;
+            margin-top: 5svh;
+            }
+            .luz {
+                aspect-ratio: 1;
+                width: 15svh;
+                border-radius: 50%;
+                margin: 0 -10vh;
+            }
+            .range {
+                width: 100%;
+                max-width: 20svh;
+                rotate: -90deg;
+            }
+            .bot2 {
+                height: 15vh;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Cores</h1>
+    <main>
+        <section class="top">
+            <button class="botao" onclick="fechar1()">Linear</button>
+            <button class="botao" onclick="fechar2()">Círculo</button>                             
+        </section>
+        <section class="mid">
+            <div id="barra"></div>
+            <div id="roda"></div>
+        </section>
+        <section class="bot">  
+            <div class="luz" id="lred"></div>
+            <div class="luz" id="lgre"></div>
+            <div class="luz" id="lblu"></div>
+        </section>
+        <section class="bot2">
+            <input type="range" class="range" value="255" min="1" max="255" name="rred" id="rred">
+            <input type="range" class="range" value="255" min="1" max="255" name="rgre" id="rgre">            
+            <input type="range" class="range" value="255" min="1" max="255" name="rblu" id="rblu">
+        </section>        
+    </main>
+    
+    <section id="icones"></section>
+</body>
+
+<script>
+    //botao
+    let roda = document.getElementById('roda');
+    let barra = document.getElementById('barra');
+    roda.style.display = 'none';
+    function fechar1() {
+        roda.style.display = 'none';
+        barra.style.display = 'block';
+    }
+    function fechar2() {
+        barra.style.display = 'none';
+        roda.style.display = 'block';
+    }
+
+    // ranges
+    let main = document.querySelector('main');
+    main.style.setProperty('--verm', 255);
+    main.style.setProperty('--verm2', 255/2);
+    main.style.setProperty('--verd', 255);
+    main.style.setProperty('--verd2', 255/2);
+    main.style.setProperty('--azul', 255);
+    main.style.setProperty('--azul2', 255/2);
+
+    let rred = document.getElementById('rred');
+    rred.addEventListener("input", (event) => {
+        main.style.setProperty('--verm', rred.value);
+        main.style.setProperty('--verm2', rred.value/2);
+    })
+    let rgre = document.getElementById('rgre');
+    rgre.addEventListener("input", (event) => {
+    main.style.setProperty('--verd', rgre.value);
+    main.style.setProperty('--verd2', rgre.value/2);
+    })
+    let rblu = document.getElementById('rblu');
+    rblu.addEventListener("input", (event) => {
+    main.style.setProperty('--azul', rblu.value);
+    main.style.setProperty('--azul2', rblu.value/2);
+    })
+</script>
+
+</html>
