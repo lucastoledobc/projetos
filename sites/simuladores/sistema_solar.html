@@ -13,21 +13,28 @@
             display: flex;
             align-items: center; /*vertical*/
             justify-content: center; /*horizontal*/
-            min-height: 100vmin; 
+        }
+
+        main * {
+            position: absolute;
+            aspect-ratio: 1;
         }
 
         #sol {
-            --x: clamp(100px, 3vw, 3vh);
-            position: absolute;
-            height: var(--x);
-            width: var(--x);
+            width: clamp(1rem, 20vw, 20vh);
 
             background: rgb(255, 230, 0);
-            box-shadow: 0 0 30px white;
+            box-shadow: 0 0 30px rgb(200, 200, 0, 0.733);
             border-radius: 50%;
         }
-
-        @keyframes anime-1 {
+        #eixo1 {
+            width: clamp(1rem, 65vw, 65vh);
+            border-bottom: 2px solid var(--branco);
+            border-radius: 50%;
+            /* border-bottom: 0px solid rgb(255, 255, 255); */
+            animation: girar 10s linear infinite;
+        }
+        @keyframes girar {
             0% {
                 transform: rotate(0deg);
             }
@@ -36,56 +43,40 @@
             }
         }
 
-        #eixo1 {
-            --e1: clamp(270px, 5vw, 5vh);
-            position: absolute;
-            height: var(--e1);
-            width: var(--e1);
-
-            border-right: 1px solid white;
+        #terra {
+            width: clamp(1rem, 10vw, 10vh);
+            background: rgb(0, 81, 255);
+            box-shadow: 0 0 20px rgba(82, 82, 252, 0.733);
             border-radius: 50%;
-            animation: anime-1 10s linear infinite;
-        }
-
-        #eixo1 #terra {
-            --t: clamp(60px, 5vw, 5vh);
-            position: absolute;
-            height: var(--t);
-            width: var(--t);
-
-            background: rgb(72, 129, 252);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.733);
-            border-radius: 50%;
-            left: 140px;
-            top: 240px;
+            right: 93%;
+            top:50%;
         }
         
         #eixo2 {
-            --e2: clamp(120px, 1vw, 1vh);
-            position: absolute;
-            height: var(--e2);
-            width: var(--e2);
-
-            border-right: 1px solid rgb(255, 255, 255);
+            width: clamp(1rem, 20vw, 20vh);
+            border-bottom: 1px solid var(--branco);
             border-radius: 50%;
-            animation: anime-1 10s linear infinite;
-
-            left: -30px;
-            top: -30px;
+            animation: girar 10s linear infinite;
+            left: -5vh;
+            top: -5vh;
         }
 
-        #eixo2 #lua {
-            --l: clamp(25px, 1vh, 1vw);
-            position: absolute;
-            height: var(--l);
-            width: var(--l);
+        @media (orientation: portrait) {
+            #eixo2 {
+            left: -5vw;
+            top: -5vw;
+        }
+        }
+
+        #lua {
+            width: clamp(1rem, 5vw, 5vh);
 
             background: rgb(255, 255, 255);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.521);
+            border: 1px solid var(--branco);
+            box-shadow: 0 0 30px rgb(255, 255, 255);
             border-radius: 50%;
-            
-            left: 65px;
-            top: 100px;
+            right: 85%;
+            top:53%;
         }
 
     </style>
@@ -104,7 +95,7 @@
         </div>
     </main>
     
-    <section id="icones"></section>
+    <section id="botoes"></section>
     <footer>
         Créditos: divLoda (youtube)
     </footer>

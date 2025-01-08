@@ -9,7 +9,7 @@
     <title>Cores</title>
     <meta name="description" content="Combinação de cores primárias RGB.">
 
-    <style>
+    <style>        
         main > section {
             display: flex;
             align-items: center;
@@ -17,18 +17,19 @@
         }
         
         .top {
-            height: 15svh;
+            height: 10svh;
+            margin-top: 5svh;
         }
         .botao {
             background-color: var(--trans);
             color: var(--branco);            
-            font-size:  clamp(1rem,7vh,9vw);
+            font-size:  clamp(1rem,6vh,8vw);
             border-radius: 5px;
             padding: 0.1rem 1rem;
         }
 
         .mid {
-            height: 25svh;
+            height: 40svh;
         }
         #barra {
             height: 10svh;
@@ -52,7 +53,7 @@
         }
         #roda {
             aspect-ratio: 1;
-            height: 25svh;
+            height: 35svh;
             border: 3px solid var(--branco);
             border-radius: 50%;
             background: conic-gradient(
@@ -72,9 +73,9 @@
                 );
         }
         
+        
         .bot {
-            height: 20svh;
-            margin-top: 10svh;
+            height: 30svh;
         }
         .luz {
             aspect-ratio: 1;
@@ -105,15 +106,20 @@
             );
         }
         
-        
+        .bot2 {
+            position: relative;
+            top:-10%;
+        }
         .range {
             width: 15svw;
         }
 
         @media (orientation: portrait) {
             .bot {
-            height: 15svh;
-            margin-top: 5svh;
+                height: 15svh;
+                margin-top: 5svh;
+                position: relative;
+                top:-5%;
             }
             .luz {
                 aspect-ratio: 1;
@@ -127,7 +133,7 @@
                 rotate: -90deg;
             }
             .bot2 {
-                height: 15vh;
+                height: 25vh;
             }
         }
 
@@ -156,7 +162,7 @@
         </section>        
     </main>
     
-    <section id="icones"></section>
+    <section id="botoes"></section>
 </body>
 
 <script>
