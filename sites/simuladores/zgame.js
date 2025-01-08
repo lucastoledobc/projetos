@@ -2,7 +2,7 @@
 
 let head = document.getElementsByTagName("head")[0];
 head.innerHTML += `
-    <link rel="shortcut icon" href="/anexos/midias/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../anexos/midias/favicon-32x32.png" type="image/x-icon">
 `;
     
 
@@ -12,21 +12,21 @@ head.innerHTML += `
 let botoes = document.getElementById('botoes')
 botoes.innerHTML = `
     <button type="button" id="back" class="button">
-        <img src="/anexos/midias/icon-back.svg" id="iback" class="icon" alt="Voltar">
+        <img src="../../anexos/midias/icon-back.svg" id="iback" class="icon" alt="Voltar">
     </button>
 
     <div class="warn" id="warn"></div>
 
     <button type="button" id="dark" class="button" onclick="dark()">
-        <img src="/anexos/midias/icon-dark1.svg" id="idark" class="icon" alt="Modo escuro">
+        <img src="../../anexos/midias/icon-dark1.svg" id="idark" class="icon" alt="Modo escuro">
     </button>
 
     <button type="button" id="info" class="button" onclick="info()">
-        <img src="/anexos/midias/icon-info.svg" id="iinfo" class="icon" alt="Informação">
+        <img src="../../anexos/midias/icon-info.svg" id="iinfo" class="icon" alt="Informação">
     </button>
 
     <button type="button" id="maxi" class="button">
-        <img src="/anexos/midias/icon-maxi.svg"id="imaxi" class="icon" onclick="maxi()" alt="Maximizar" >
+        <img src="../../anexos/midias/icon-maxi.svg"id="imaxi" class="icon" onclick="maxi()" alt="Maximizar" >
     </button>
 `;
 
@@ -66,7 +66,7 @@ function info() {
         warn.style.transition = '1s';
 
         info.innerHTML = `
-        <img src="/anexos/midias/icon-close.svg" id="iinfo" class="icon" alt="Fechar">
+        <img src="../../anexos/midias/icon-close.svg" id="iinfo" class="icon" alt="Fechar">
         `;
         
         dark.style.top = 'clamp(2rem,12vw,6vh)';
@@ -86,7 +86,7 @@ function info() {
         warn.style.visibility = 'collapse';
         
         info.innerHTML = `
-        <img src="/anexos/midias/icon-info.svg" id="iinfo" class="icon" alt="Informação">
+        <img src="../../anexos/midias/icon-info.svg" id="iinfo" class="icon" alt="Informação">
         `;
 
         dark.style.top = '10px';
@@ -131,15 +131,15 @@ function maxi() {
     let tela = document.documentElement;
     if (tela.requestFullscreen) {
         tela.requestFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="mini()">
+        <img src="../../anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="mini()">
         `;
         } else if (tela.webkitRequestFullscreen) { /* Safari */
         tela.webkitRequestFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="mini()">
+        <img src="../../anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="mini()">
         `;
         } else if (tela.msRequestFullscreen) { /* IE11 */
         tela.msRequestFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="mini()">
+        <img src="../../anexos/midias/icon-mini.svg" id="imaxi" class="icon" alt="Minimizar" onclick="mini()">
         `;
         }
 }
@@ -148,15 +148,15 @@ function mini() {
     let img = document.getElementById("maxi");
     if (document.exitFullscreen) {
         document.exitFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="maxi()">
+        <img src="../../anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="maxi()">
         `;
     } else if (document.webkitExitFullscreen) { /* Safari */
         document.webkitExitFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="maxi()">
+        <img src="../../anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="maxi()">
         `;
     } else if (document.msExitFullscreen) { /* IE11 */
         document.msExitFullscreen(), img.innerHTML = `
-        <img src="/anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="maxi()">
+        <img src="../../anexos/midias/icon-maxi.svg" id="imaxi" class="icon" alt="Maximizar" onclick="maxi()">
         `;
     }
 } 
