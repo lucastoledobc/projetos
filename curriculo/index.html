@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            text-wrap: wrap;
+        }
+
+        body{
+            display: grid;
+            grid-template-columns: auto auto;
+            min-height: 100svh;
+            /* background-image: linear-gradient(45deg, rgb(0, 195, 255) , yellow); */
+        }
+
+        div {
+            width: 46vw;
+        }
+        #info {
+            position: sticky;
+            top: 2vh;            
+            margin: 0 2vw;
+            height: 96vh;
+
+            border-radius: 50px;
+            background: #e0e0e0;
+            box-shadow:  20px 20px 60px #bebebe,
+                        -20px -20px 60px #ffffff;
+        }
+
+        img {
+            display: block;
+            width: 30vw;
+            max-width: 30svh;
+            margin: 0rem auto; 
+            
+            border-radius: 50%;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+            box-shadow:  20px 20px 60px #bebebe,
+                        -20px -20px 60px #ffffff;
+        }
+
+        h1 {
+            display: block;
+            text-align: center;
+            padding: 2rem;
+        }
+        h2 {
+            padding: 1rem;
+        }
+        
+        ul {
+            padding: 1rem;
+        }
+        #ul1 {
+            list-style: none;
+        }
+        li {
+            font-size: 1.2rem;
+            padding: 0.3rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h1>Lucas Toledo</h1>
+        <img src="anexos/midias/eu.jpg" alt="foto de perfil">
+        <h1>Informações</h1>
+        <ul id="ul1">
+            <li>email: lucastoledobc@gmail.com</li>
+            <li>Formação: licenciatura em Física (UERJ)</li>
+        </ul>
+    </div>
+    <div id="projetos">
+        <h1>Projetos</h1>
+        <h2>HTML-CSS</h2>
+        <ul>
+            <li><a href="sites/android/index.html">Android</a></li>
+            <li><a href="sites/cordel/index.html">Cordel Moderno</a></li>
+            <li><a href="sites/redes/index.html">Redes</a></li>
+        </ul>
+        <h2>Simuladores</h2>
+        <ul>
+            <li><a href="sites/simuladores/sistema_solar.html">Sistema Solar</a></li>
+            <li><a href="sites/simuladores/cores.html">Cores</a></li>
+        </ul>
+        <p></p>
+    </div>    
+</body>
+</html>
